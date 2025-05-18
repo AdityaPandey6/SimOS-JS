@@ -2,6 +2,8 @@
 
 A lightweight CLI-based operating system simulation implemented in pure JavaScript.
 
+![NexOS Screenshot](https://i.ibb.co/Dg5Zc5Y/nexos-screenshot.jpg)
+
 ```
  _   _            ___  ____
 | \ | | _____  __/ _ \/ ___|
