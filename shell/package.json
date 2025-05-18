@@ -1,0 +1,28 @@
+{
+  "name": "nexos-shell-js",
+  "version": "1.0.0",
+  "description": "JavaScript-only shell interface for NexOS - A lightweight CLI-based operating system with real file system integration",
+  "main": "nexos.js",
+  "scripts": {
+    "start": "node nexos.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nexos",
+    "os",
+    "shell",
+    "cli",
+    "file-system",
+    "terminal"
+  ],
+  "author": "Arjun Kandaria",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kandariarjun07/NexOS.git"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
