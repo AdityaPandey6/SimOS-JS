@@ -1,11 +1,11 @@
-#!/bin/bash
+#!/bin/sh
+# Unix shell script to run NexOS
 
-# NexOS Run Script (JavaScript-only version)
-
-echo "Starting NexOS (JavaScript-only version)..."
+echo "Starting SimOs (JavaScript-only version)..."
 
 # Run the JavaScript shell
-cd shell
-node nexos.js
+cd "$(dirname "$0")"
+cd ..
+node shell/nexos.js
 
-echo "NexOS terminated."
+echo "SimOs terminated."

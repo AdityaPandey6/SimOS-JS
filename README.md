@@ -1,149 +1,115 @@
-# NexOS
+# SiMOS
 
-A lightweight CLI-based operating system simulation implemented in pure JavaScript.
+A super simple, fun, and safe command-line operating system simulation for learning and playing—made with JavaScript!
 
-![NexOS Screenshot](https://i.ibb.co/rf4V843S/Screenshot-2025-05-18-222516.png)
+![SiMOS Screenshot](https://i.ibb.co/rf4V843S/Screenshot-2025-05-18-222516.png)
 
-```
- _   _            ___  ____
-| \ | | _____  __/ _ \/ ___|
-|  \| |/ _ \ \/ / | | \___ \
-| |\  |  __/>  <| |_| |___) |
-|_| \_|\\___/_/\_\\___/|____/
+---
 
-A Lightweight CLI-Based OS Simulation
-```
+## What is SiMOS?
+SiMOS is like a tiny pretend computer you can use in your terminal. You can make files, open them, write in them, and make folders—just by typing commands! It doesn't change your real computer files, so you can play and learn safely.
 
-## Overview
-
-NexOS is a command-line interface operating system simulation that provides a clean, intuitive interface for file operations while working with real files on your system. It's implemented entirely in JavaScript with no external dependencies, making it lightweight and easy to run on any system with Node.js.
+---
 
 ## Features
+- **Make and read files** (like notes or stories)
+- **Edit files** with a simple built-in editor
+- **Make folders** and move between them
+- **See what's inside folders**
+- **Delete files or folders**
+- **Open your SiMOS folder in your real computer's explorer**
+- **Works on Windows, Mac, and Linux**
+- **No internet needed, no setup, just Node.js!**
 
-- Real file system integration
-- Command-line interface with custom commands
-- File operations (create, read, edit, delete)
-- Directory navigation
-- Cross-platform file explorer integration
-- Vim-like text editor for file editing
-- Zero external dependencies
+---
 
-## Installation
+## How to Start SiMOS
 
-### Prerequisites
+### 1. You need Node.js
+If you don't have Node.js, [download it here](https://nodejs.org/).
 
-- Node.js (v14+)
+### 2. Open a terminal (Command Prompt, PowerShell, or Terminal)
 
-### Steps
-
-No installation is required! NexOS is a pure JavaScript application with no external dependencies.
-
-## Running NexOS
-
-### On Windows
-
-1. Double-click on the `run.bat` file
-
-   OR
-
-   Run from command prompt:
-   ```bash
-   run.bat
-   ```
-
-### On macOS/Unix/Linux
-
-1. Make the run script executable:
-   ```bash
-   chmod +x run.sh
-   ```
-
-2. Run the script:
-   ```bash
-   ./run.sh
-   ```
-
-### Manual Start
-
-You can also start NexOS manually:
-
-```bash
-cd shell
-node nexos.js
+### 3. Go to the SiMOS folder
+If you downloaded or copied SiMOS, use:
+```
+cd path/to/NexOS-JS
 ```
 
-## Available Commands
+### 4. Run SiMOS!
+- On **Windows**:
+  - Double-click `run.bat` or type:
+    ```
+    .\run.bat
+    ```
+- On **Mac/Linux**:
+  - Open Terminal and type:
+    ```
+    ./run.sh
+    ```
+    (If it says permission denied, run: `chmod +x run.sh` first)
+- Or, run directly with Node.js:
+    ```
+    node shell/simos.js
+    ```
 
-NexOS provides the following commands:
+---
 
-### File Operations
+## What Can I Type? (Commands)
 
-- `create <path> [content]` - Create a new file with optional content
-- `show <path>` - Display file contents
-- `edit <path>` - Edit file contents in a simple editor (type EOF on a new line to save and exit)
-- `erase <path>` - Remove a file or directory
-- `trunct <path>` - Truncate a file (empty its contents)
+- `help` — Show all commands
+- `ls` — See what's in the current folder
+- `cd foldername` — Go into a folder
+- `cd ..` — Go back up one folder
+- `pwd` — Show where you are
+- `mkdir foldername` — Make a new folder
+- `create filename.txt Hello!` — Make a file with some text
+- `show filename.txt` — Read a file
+- `edit filename.txt` — Edit a file (type lines, then `EOF` to save)
+- `erase filename.txt` — Delete a file or folder
+- `trunct filename.txt` — Empty a file
+- `explorer` — Open the current SiMOS folder in your real computer
+- `clear` — Clear the screen
+- `exit` or `quit` — Leave SiMOS
 
-### Directory Operations
+**Shortcuts:**
+- `touch` = `create`
+- `cat` = `show`
+- `rm` = `erase`
+- `cls` = `clear`
 
-- `ls [path]` - List directory contents
-- `cd <path>` - Change directory
-- `pwd` - Print working directory
-- `mkdir <path>` - Create directory
-- `explorer` - Open current directory in file explorer
+---
 
-### System Commands
-
-- `help` - Show available commands
-- `info` - Show system information and root directory
-- `exit` or `quit` - Exit the program
-- `clear` or `cls` - Clear the screen
-
-### Command Aliases
-
-NexOS also supports these command aliases for compatibility:
-
-- `touch` → `create`
-- `cat` → `show`
-- `rm` → `erase`
-- `cls` → `clear`
-
-## Command Usage Examples
-
-### Basic File Operations
-
+## Example: Make and Read a File
 ```
-nexos:/> mkdir projects
-nexos:/> cd projects
-nexos:/projects> create hello.txt Hello, world!
-nexos:/projects> show hello.txt
-Hello, world!
-nexos:/projects> edit hello.txt
-```
-
-When using the `edit` command, you'll enter a simple text editor:
-- Type text to add new lines
-- Type `EOF` on a new line to save and exit
-
-### Directory Navigation
-
-```
-nexos:/> ls
-nexos:/> mkdir docs
-nexos:/> cd docs
-nexos:/docs> pwd
-/docs
-nexos:/docs> cd ..
-nexos:/>
+simos:/> mkdir fun
+simos:/> cd fun
+simos:/fun> create hello.txt Hello, SiMOS!
+simos:/fun> show hello.txt
+Hello, SiMOS!
 ```
 
-### Using the Explorer Command
+## Example: Edit a File
+```
+simos:/fun> edit hello.txt
+(Type your lines, then type EOF on a new line to save and exit)
+```
 
-```
-nexos:/> explorer
-```
-This will open the current directory in your system's file explorer.
+---
+
+## Where are my SiMOS files?
+All your SiMOS files and folders are in the `simos-files` folder inside the project. They are kept separate from your real computer files.
+
+---
+
+## Can I break my computer with SiMOS?
+**No!** SiMOS only works inside its own folder. You can play, learn, and even make mistakes safely.
+
+---
 
 ## License
+MIT — You can use, share, and change SiMOS however you like!
 
-MIT
+---
+
+**Have fun exploring with SiMOS!**
