@@ -2,7 +2,7 @@
 
 A super simple, fun, and safe command-line operating system simulation for learning and playing—made with JavaScript!
 
-![SiMOS Screenshot](https://i.ibb.co/rf4V843S/Screenshot-2025-05-18-222516.png)
+![SiMOS Screenshot](assets/osSs.png)
 
 ---
 
